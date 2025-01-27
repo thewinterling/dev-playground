@@ -1,0 +1,71 @@
+Checks:
+'*,
+-*-uppercase-literal-suffix,
+-altera-*,
+-android-*,
+-cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+-cppcoreguidelines-pro-bounds-constant-array-index,
+-cppcoreguidelines-pro-type-vararg,
+-darwin-*,
+-fuchsia-*,
+-google-readability-todo,
+-google-runtime-references,
+-hicpp-braces-around-statements,
+-hicpp-no-array-decay,
+-hicpp-vararg,
+-linuxkernel-*,
+-llvm-*,
+-llvmlibc-*,
+-modernize-use-trailing-return-type,
+-mpi-*,
+-objc-*,
+-readability-avoid-const-params-in-decls,
+-readability-simplify-boolean-expr,
+-zircon-*,
+'
+
+CheckOptions:
+  - { key: readability-identifier-naming.NamespaceCase,                value: lower_case }
+  - { key: readability-identifier-naming.ClassCase,                    value: CamelCase  }
+  - { key: readability-identifier-naming.StructCase,                   value: CamelCase  }
+
+  - { key: readability-identifier-naming.TemplateParameterCase,        value: CamelCase  }
+  - { key: readability-identifier-naming.TemplateParameterSuffix,      value: 'T'  }
+  - { key: readability-identifier-naming.ValueTemplateParameterCase,   value: CamelCase  }
+  - { key: readability-identifier-naming.ValueTemplateParameterPrefix, value: 'k'  }
+  - { key: readability-identifier-naming.ValueTemplateParameterSuffix, value: 'T'  }
+
+  - { key: readability-identifier-naming.TypedefCase,                  value: CamelCase  }
+  - { key: readability-identifier-naming.TypeAliasCase,                value: CamelCase  }
+  - { key: readability-identifier-naming.EnumCase,                     value: CamelCase  }
+
+  - { key: readability-identifier-naming.VariableCase,                 value: lower_case }
+  - { key: readability-identifier-naming.ParameterCase,                value: lower_case }
+  - { key: readability-identifier-naming.PrivateMemberCase,            value: lower_case }
+  - { key: readability-identifier-naming.PrivateMemberPrefix,          value: 'm_' }
+  - { key: readability-identifier-naming.ProtectedMemberCase,          value: lower_case }
+  - { key: readability-identifier-naming.ProtectedMemberPrefix,        value: 'm_' }
+  - { key: readability-identifier-naming.GlobalVariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.GlobalVariablePrefix,         value: 'g_' }
+  - { key: readability-identifier-naming.StaticVariableCase,           value: lower_case }
+  - { key: readability-identifier-naming.StaticVariablePrefix,         value: 's_' }
+
+  - { key: readability-identifier-naming.StaticConstantCase,           value: CamelCase }
+  - { key: readability-identifier-naming.StaticConstantPrefix,         value: 'k' }
+  - { key: readability-identifier-naming.ConstexprVariableCase,        value: CamelCase }
+  - { key: readability-identifier-naming.ConstexprVariablePrefix,      value: 'k' }
+  - { key: readability-identifier-naming.GlobalConstantCase,           value: CamelCase }
+  - { key: readability-identifier-naming.GlobalConstantPrefix,         value: 'k' }
+  - { key: readability-identifier-naming.EnumConstantCase,             value: CamelCase }
+  - { key: readability-identifier-naming.EnumConstantPrefix,           value: 'k' }
+
+  - { key: readability-identifier-naming.FunctionCase,                 value: camelBack }
+
+  - { key: readability-identifier-naming.TsmRotationCase,              value: target_T_source }
+  - { key: readability-identifier-naming.TsmIsometryCase,              value: target_T_source }
+  - { key: readability-identifier-naming.TsmJacobianCase,              value: target_J_source }
+  - { key: readability-identifier-naming.TsmIndexStructCase,           value: UPPER_CASE }
+
+  - { key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic, value: 1 } # structs are allowed
+
+FormatStyle: file # use .clang-format from the project dir for fixes
