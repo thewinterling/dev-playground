@@ -35,4 +35,4 @@ jobs:
         run: uv run ruff format --check .
 
       - name: Run tests
-        run: uv run pytest --verbose .
+        run: uv run pytest --verbose training/python/tests/
