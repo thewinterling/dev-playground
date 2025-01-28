@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name: CI Pipeline (format, linter, tests)
+    name: CI Pipeline
     runs-on: ubuntu-latest
 
     steps:
@@ -22,11 +22,24 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install uv
+      - name: Install tools
         run: |
           pip install --upgrade pip
           pip install uv
           uv sync
+
+          sudo apt-get update
+          sudo apt-get install -y clang-format
+
+      - name: Check C++ Code Formatting with Clang-Format
+        run: |
+          FILES=$(find . -name "*.cpp" -o -name "*.h")
+          for FILE in $FILES; do
+            clang-format --dry-run --Werror $FILE || (
+              echo "File $FILE is not properly formatted."
+              exit 1
+            )
+          done
 
       - name: Run linting with Ruff
         run: uv run ruff check .
