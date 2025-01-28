@@ -29,11 +29,10 @@ jobs:
           uv sync
 
       - name: Run linting with Ruff
-        run: ruff check .
+        run: uv run ruff check .
 
       - name: Run Ruff format check
-        run: ruff format --check .
+        run: uv run ruff format --check .
 
       - name: Run tests
-        run: |
-          pytest --verbose .
+        run: uv run pytest --verbose .
