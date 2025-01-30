@@ -61,11 +61,6 @@ CheckOptions:
 
   - { key: readability-identifier-naming.FunctionCase,                 value: camelBack }
 
-  - { key: readability-identifier-naming.TsmRotationCase,              value: target_T_source }
-  - { key: readability-identifier-naming.TsmIsometryCase,              value: target_T_source }
-  - { key: readability-identifier-naming.TsmJacobianCase,              value: target_J_source }
-  - { key: readability-identifier-naming.TsmIndexStructCase,           value: UPPER_CASE }
-
   - { key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic, value: 1 } # structs are allowed
 
 FormatStyle: file # use .clang-format from the project dir for fixes

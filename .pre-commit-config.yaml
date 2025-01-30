@@ -2,8 +2,18 @@ repos:
 - repo: https://github.com/astral-sh/ruff-pre-commit
   rev: v0.9.3
   hooks:
-    - id: ruff        # Runs the linter.
-      name: Ruff Linter (ruff check)
+    - id: ruff
+      name: Run ruff check
     
-    - id: ruff-format # Runs the formatter.
-      name: Ruff Formatter (ruff format)
+    - id: ruff-format
+      name: Run ruff format
+
+- repo: local
+  hooks:
+    - id: clang-format
+      name: Run clang-format.
+      language: system
+      entry: clang-format-15
+      types: [text]
+      files: \.(c|cc|cxx|cpp|cu|cuh|frag|glsl|h|hpp|hxx|inl)$
+      args: [-style=file, -i]
