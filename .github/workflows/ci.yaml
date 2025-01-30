@@ -34,25 +34,5 @@ jobs:
       - name: Pre-commit checks
         run: pre-commit run --all-files
 
-
-      #     sudo apt-get update
-      #     sudo apt-get install -y clang-format
-
-      # - name: Check C++ Code Formatting with Clang-Format
-      #   run: |
-      #     FILES=$(find . -name "*.cpp" -o -name "*.h")
-      #     for FILE in $FILES; do
-      #       clang-format --dry-run --Werror $FILE || (
-      #         echo "File $FILE is not properly formatted."
-      #         exit 1
-      #       )
-      #     done
-
-      # - name: Run linting with Ruff
-      #   run: uv run ruff check .
-
-      # - name: Run Ruff format check
-      #   run: uv run ruff format --check .
-
       - name: Run tests
         run: uv run pytest --verbose training/python/tests/
