@@ -1,9 +1,8 @@
-
 # DevPlayground
 A repository for all sorts of training code
 
 
-# Setup
+## Setup
 
 ```bash
 
