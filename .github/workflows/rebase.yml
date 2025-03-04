@@ -1,15 +1,24 @@
-name: Rebase
+name: Automatic Rebase
 on:
   issue_comment:
     types: [created]
 jobs:
-  slashCommandDispatch:
+  rebase:
+    name: Rebase
     runs-on: ubuntu-latest
+    if: >
+      github.event.issue.pull_request != '' &&
+      (
+        contains(github.event.comment.body, '/rebase') ||
+        contains(github.event.comment.body, '/autosquash')
+      )
     steps:
-      - name: Rebase
-        uses: peter-evans/slash-command-dispatch@v3
+      - name: Checkout the latest code
+        uses: actions/checkout@v3
         with:
           token: ${{ secrets.REBASE_PAT }}
-          commands: rebase
-          permission: write
-          issue-type: pull-request
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
+      - name: Automatic Rebase
+        uses: cirrus-actions/rebase@1.8
+        env:
+          GITHUB_TOKEN: ${{ secrets.REBASE_PAT }}
