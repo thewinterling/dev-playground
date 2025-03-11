@@ -7,11 +7,14 @@ from urllib.parse import urlparse
 import requests
 
 
-def is_valid_url(url: str) -> bool:
+def is_valid_url(url: str | Path) -> bool:
     """Checks if the given string 'url' is a valid URL (format-wise).
     It does not check if the address really exists.
 
     Returns: True if the scheme matches the one of a regular url, False otherwise."""
+    # Make sure that we also convert Path objects to strings.
+    # In theory an URL should never be a pathlib.Path, but we do the checks below nevertheless.
+    url = str(url)
     try:
         parsed = urlparse(url)
         return all([parsed.scheme, parsed.netloc])
