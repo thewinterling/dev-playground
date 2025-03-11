@@ -94,6 +94,7 @@ python -m {project_name} <...>
 def create_structure(project_name: str, base_folder: Path, owner: str):
     """Creates a boilerplate folder structure usable for any python project.
     Adapted from: https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6
+    (tests moved one level above, everything else is the same).
 
     project_name
     ├── LICENSE.md // MIT License
@@ -107,11 +108,11 @@ def create_structure(project_name: str, base_folder: Path, owner: str):
     │   │   └── __init__.py
     │   ├── __init__.py
     │   ├── __main__.py
-    |   ├── scripts
-    │   │   └── script_dummy.py
-    │   └── tests
-    │       ├── test_dummy.py
-    │       └── __init__.py
+    |   └── scripts
+    │       └── script_dummy.py
+    ├── tests
+    │   ├── test_dummy.py
+    │   └── __init__.py
     ├── README.md
     └── .gitignore
 
@@ -130,7 +131,7 @@ def create_structure(project_name: str, base_folder: Path, owner: str):
         base_folder / project_name / project_name / "common",
         base_folder / project_name / project_name / "data",
         base_folder / project_name / project_name / "scripts",
-        base_folder / project_name / project_name / "tests",
+        base_folder / project_name / "tests",
     ]
     for folder in folders:
         folder.mkdir()
@@ -148,8 +149,8 @@ def create_structure(project_name: str, base_folder: Path, owner: str):
     (base_folder / project_name / project_name / "data" / "data_dummy.py").touch()
     (base_folder / project_name / project_name / "data" / "__init__.py").touch()
 
-    (base_folder / project_name / project_name / "tests" / "test_dummy.py").touch()
-    (base_folder / project_name / project_name / "tests" / "__init__.py").touch()
+    (base_folder / project_name / "tests" / "test_dummy.py").touch()
+    (base_folder / project_name / "tests" / "__init__.py").touch()
 
     (base_folder / project_name / project_name / "scripts" / "script_dummy.py").touch()
 
