@@ -1,0 +1,16 @@
+[project]
+name = "packaging_example"
+version = "0.0.1"
+authors = [
+  { name="Timo Winterling", email="author@example.com" },
+]
+description = "This is a simple test how to package a python project."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]
