@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Small script to verify if a 'default' value is needed when using 'store_true' action in argparse.
+"""Showcase to verify if a 'default' value is needed when using 'store_true' action in argparse.
 Answer --> No.
 """
 
@@ -8,9 +8,7 @@ import argparse
 
 
 def _parse_args():
-    parser = argparse.ArgumentParser(
-        description="There is no default value needed when using 'store_true'."
-    )
+    parser = argparse.ArgumentParser(description="There is no default value needed when using 'store_true'.")
 
     parser.add_argument(
         "-s",

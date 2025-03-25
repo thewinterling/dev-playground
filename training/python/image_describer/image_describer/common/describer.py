@@ -58,9 +58,7 @@ class Describer:
         captions = {}
         for image in self._images:
             if is_valid_url(image):
-                opened_image = Image.open(requests.get(image, stream=True).raw).convert(
-                    "RGB"
-                )
+                opened_image = Image.open(requests.get(image, stream=True).raw).convert("RGB")
             else:
                 opened_image = Image.open(image).convert("RGB")
             inputs = self._processor(
@@ -71,7 +69,5 @@ class Describer:
             with torch.no_grad():
                 caption = self._model.generate(**inputs)
 
-            captions[image] = self._processor.decode(
-                caption[0], skip_special_tokens=True
-            )
+            captions[image] = self._processor.decode(caption[0], skip_special_tokens=True)
         return captions

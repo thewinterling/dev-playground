@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
-"""Be aware that all mutable objects are passed by reference in Python.
+"""Showcase of 'pass-by-reference' in python.
+
+Be aware that all mutable objects are passed by reference in Python.
 Knowing this, the issues below can be avoided."""
 
 import typing
@@ -18,9 +20,7 @@ class SomeClass:
 
 
 if __name__ == "__main__":
-    print(
-        " --- case 1: data gets changed outside of the class, but class member is affected:"
-    )
+    print(" --- case 1: data gets changed outside of the class, but class member is affected:")
     data = [1, 2, 3]
     a = SomeClass(data=data)
 
