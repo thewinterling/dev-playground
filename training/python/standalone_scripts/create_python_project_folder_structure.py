@@ -5,11 +5,11 @@ import datetime
 from pathlib import Path
 import logging
 
+"""Script to create a boilerplate folder structure for a python project."""
+
 
 def _parse_args():
-    parser = argparse.ArgumentParser(
-        description="Creates a boilerplate folder structure for a python project."
-    )
+    parser = argparse.ArgumentParser(description="Creates a boilerplate folder structure for a python project.")
     parser.add_argument(
         "--name",
         type=str,
@@ -120,9 +120,7 @@ def create_structure(project_name: str, base_folder: Path, owner: str):
     setup there!
     """
     if (base_folder / project_name).exists():
-        logging.error(
-            f"{base_folder / project_name} exists already, doing nothing here."
-        )
+        logging.error(f"{base_folder / project_name} exists already, doing nothing here.")
         exit(-1)
 
     folders = [
