@@ -8,6 +8,7 @@ dependencies = [
     "click>=8.1.8",
     "furo>=2024.8.6",
     "ipdb>=0.13.13",
+    "linkify-it-py>=2.0.3",
     "myst-parser>=4.0.1",
     "pillow>=11.1.0",
     "pre-commit>=4.1.0",

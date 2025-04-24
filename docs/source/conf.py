@@ -22,6 +22,7 @@ extensions = [
 ]
 
 myst_enable_extensions = [
+    "linkify",
     "colon_fence",
 ]
 
@@ -32,6 +33,10 @@ source_suffix = {
 
 templates_path = ["_templates"]
 exclude_patterns = []
+include_patterns = [
+    "**",
+    ".github/**",
+]
 
 
 # -- Options for HTML output -------------------------------------------------
