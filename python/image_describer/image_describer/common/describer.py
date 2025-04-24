@@ -42,8 +42,12 @@ class Describer:
         # For the start, we use the BLIP model and processor for describing the images.
         # To be decided if that should also be made configurable.
         self._device = "cuda" if torch.cuda.is_available() else "cpu"
-        self._model = BlipForConditionalGeneration.from_pretrained(Describer.MODEL_NAME)
+        self._model = BlipForConditionalGeneration.from_pretrained(Describer.MODEL_NAME).to(self._device)
         self._processor = BlipProcessor.from_pretrained(Describer.MODEL_NAME)
+
+    @property
+    def runs_on(self):
+        return self._device
 
     def describe_images(self) -> str:
         """Runs the image description using a BLIP model. The function is capable of opening images from a local
