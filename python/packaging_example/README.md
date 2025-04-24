@@ -27,11 +27,11 @@ $ mkdir test
 $ uv init
 $ uv venv
 $ source .venv/bin/activate
-$ uv pip install /home/wtn2lr/workspace/dev-playground/dist/packaging_example-0.0.1-py3-none-any.whl
+$ uv pip install /home/<USER>/workspace/dev-playground/dist/packaging_example-0.0.1-py3-none-any.whl
 Resolved 1 package in 2ms
 Prepared 1 package in 5ms
 Installed 1 package in 13ms
- + packaging-example==0.0.1 (from file:///home/wtn2lr/workspace/dev-playground/dist/packaging_example-0.0.1-py3-none-any.whl)
+ + packaging-example==0.0.1 (from file:///home/<USER>/workspace/dev-playground/dist/packaging_example-0.0.1-py3-none-any.whl)
 ```
 Then you can use the package as any python package:
 
