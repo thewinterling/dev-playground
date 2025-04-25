@@ -14,6 +14,11 @@ def test_describer_instantiation_works_without_errors(image_url: str):
     # Check if it is properly instantiated, mostly a dummy check since otherwise we would not get here.
     assert isinstance(describer, Describer)
 
+    # Ensure that the model is actually loaded correctly (either cpu or cuda).
+    # Note that we access the (private) model attribute here. We do not want to expose the model
+    # in the public API, but we want to check here if it is loaded correctly.
+    assert describer._model.device.type == describer.runs_on
+
 
 def test_describer_describe_images_works_without_errors(image_url: str):
     images = [image_url]
