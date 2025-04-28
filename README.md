@@ -1,37 +1,29 @@
 # DevPlayground
+
+![title-image](title_image.png)
 A mono repository for all sorts of training code.
 
 ## Content
 
-* [C++](cpp/README.md)
-* [github actions](.github/README.md)
-* [python](python/README.md)
-* [bazel](bazel/README.md)
-* [uv](uv/README.md)
-
-
-
-
-
-
-
-
-
-
-
-
+* [C++](src/cpp/README.md)
+* [github actions](src/github/README.md)
+* [python](src/python/README.md)
+* [bazel](src/bazel/README.md)
+* [uv](src/uv/README.md)
 
 
 ## Setup the repo
 
+We have a setup script that handles all necessary steps. Run it via
+
 ```bash
-
-sudo apt update
-sudo apt install clang-format-15 # This is used in the pre-commit hook.
-
-pre-commit install
+./set-me-up.py
 ```
 
+It
+- installs `clang-format-15` if not already available,
+- installs `bazelisk` if not already available,
+- installs `uv` if not already available,
+- creates the `venv` using `uv`,
+- installs python sub packages as editable packages.
 
-
-For C++, install `bazelisk` as mentioned above.
