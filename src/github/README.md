@@ -6,4 +6,4 @@ hence ultimately making things more efficient.
 While the CI pipeline is to enforce certain standards on the code of this repo, it is also to _train_ how to
 set it up - and maintain it.
 
-Implementation is in [<REPO_ROOT>/.github](../.github).
+Implementation is in [<REPO_ROOT>/.github](../../.github).
