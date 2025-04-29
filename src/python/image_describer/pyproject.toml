@@ -1,0 +1,21 @@
+[project]
+name = "image_describer"
+version = "0.0.1"
+authors = [
+  { name="Timo Winterling", email="author@example.com" },
+]
+description = "Package that generates descriptions on any input image."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=11.1.0",
+    "torch>=2.6.0",
+    "torchvision>=0.21.0",
+    "transformers>=4.49.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE*"]

@@ -1,4 +1,4 @@
-from image_describer.common.describer import Describer
+from image_describer.describer import Describer
 import pytest
 
 
