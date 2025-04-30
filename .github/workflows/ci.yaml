@@ -24,11 +24,7 @@ jobs:
 
       - name: Install tools
         run: |
-          sudo apt install -y clang-format-15
-          pip install --upgrade pip
-          pip install uv
-          
-          uv sync
+          ./set-me-up.py --skip_prompt
 
       - name: Pre-commit checks
         run: uv run pre-commit run --all-files

@@ -1,7 +1,7 @@
 import click
 import logging
 from pathlib import Path
-from image_describer.common.describer import Describer
+from image_describer.describer import Describer
 
 
 @click.group()
