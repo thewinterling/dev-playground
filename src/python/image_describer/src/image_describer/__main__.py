@@ -1,6 +1,8 @@
-import click
 import logging
 from pathlib import Path
+
+import click
+
 from image_describer.describer import Describer
 
 

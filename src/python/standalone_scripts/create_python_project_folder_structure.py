@@ -2,8 +2,8 @@
 
 import argparse
 import datetime
-from pathlib import Path
 import logging
+from pathlib import Path
 
 """Script to create a boilerplate folder structure for a python project."""
 

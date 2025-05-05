@@ -1,5 +1,5 @@
-from pathlib import Path
 import os
+from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DOCS_INDEX = REPO_ROOT / "src/docs/source/index.md"

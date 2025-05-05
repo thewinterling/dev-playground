@@ -1,10 +1,11 @@
 from pathlib import Path
 from typing import List
-from PIL import Image
-import torch
-from transformers import BlipProcessor, BlipForConditionalGeneration
 from urllib.parse import urlparse
+
 import requests
+import torch
+from PIL import Image
+from transformers import BlipForConditionalGeneration, BlipProcessor
 
 
 def is_valid_url(url: str | Path) -> bool:

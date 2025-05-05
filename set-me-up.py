@@ -6,14 +6,14 @@ Run it from the root of the repository:
 without any arguments.
 """
 
+import argparse
+import json
 import os
+import platform
 import shutil
 import subprocess
 import sys
 from pathlib import Path
-import platform
-import json
-import argparse
 
 EXPECTED_UV_VERSION = "0.6.14"
 EXPECTED_CLANG_FORMAT_VERSION = "15"
