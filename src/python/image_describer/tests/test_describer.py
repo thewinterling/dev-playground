@@ -1,5 +1,5 @@
-from image_describer.describer import Describer
 import pytest
+from image_describer.describer import Describer
 
 
 @pytest.fixture

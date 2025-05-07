@@ -1,9 +1,10 @@
-import time
 import random
+import time
+from multiprocessing import Manager, Process
+
 from rich.console import Console
 from rich.live import Live
 from rich.table import Table
-from multiprocessing import Process, Manager
 
 """Showcasing a simple progress bar for multiple parallel processes using rich and multiprocessing.
 The task came up since tqdm does not work well with multiprocessing and the console output
