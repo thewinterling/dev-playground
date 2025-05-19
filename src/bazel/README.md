@@ -17,6 +17,9 @@ Create a `~/.bazelrc`:
 # If you wish cross-workspace caching.
 build --disk_cache=/home/<USER>/.bazelcache
 
+# Enable verbose test output
+test --test_output=all
+
 # Limit the resources that Bazel is allowed to use.
 # This prevents the PC from freezing because Bazel uses everything.
 build --local_resources=cpu=HOST_CPUS-4
