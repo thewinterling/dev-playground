@@ -38,11 +38,12 @@ def _get_uv_version() -> str:
 
 
 def _get_path_to_installable_sub_packages() -> str:
-    TOP_LEVEL = "radar-ai-perception/pyproject.toml"
+    TOP_LEVEL_PATH = Path(__file__).parent.resolve()
+    TOP_LEVEL_PYPROJECT_TOML = Path("pyproject.toml")
     files = Path(__file__).parent.glob("**/pyproject.toml")
-    files = [f.resolve() for f in files]
-    files = [f.parent for f in files if TOP_LEVEL not in str(f)]
-    return files
+    files = [f.resolve().relative_to(TOP_LEVEL_PATH) for f in files]
+    folder_paths = [f.parent for f in files if TOP_LEVEL_PYPROJECT_TOML != f]
+    return folder_paths
 
 
 def setup_with_uv(skip_prompt) -> None:
