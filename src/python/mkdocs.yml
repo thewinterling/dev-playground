@@ -1,8 +1,0 @@
-site_name: Python
-
-nav:
-  - Overview: "README.md"
-  - Modules: 
-    - "./docs/image_describer/README.md"
-    - "./docs/packaging_example/README.md"
-    - "./docs/standalone_scripts/README.md"

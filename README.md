@@ -1,6 +1,6 @@
 # DevPlayground
 
-![title-image](title_image.png)
+![title-image](docs/title_image.png)
 A mono repository for all sorts of training code.
 
 ## Content

@@ -1,9 +1,0 @@
-site_name: C++
-
-nav:
-  - Overview: "README.md"
-  - Leetcode: 
-    - "./docs/leetccode/add_two_numbers.md"
-    - "./docs/leetccode/merge_arrays.md"
-    - "./docs/leetccode/remove_element.md"
-    - "./docs/leetccode/two_sum.md"

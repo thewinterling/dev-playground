@@ -10,6 +10,7 @@ dependencies = [
     "ipdb>=0.13.13",
     "linkify-it-py>=2.0.3",
     "mkdocs>=1.6.1",
+    "mkdocs-awesome-pages-plugin>=2.10.1",
     "mkdocs-material>=9.6.20",
     "mkdocs-monorepo-plugin>=1.1.2",
     "myst-parser>=4.0.1",
