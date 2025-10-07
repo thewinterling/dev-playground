@@ -1,0 +1,13 @@
+site_name: dev-playground Documentation
+
+nav:
+  - Intro: 'README.md'
+  - Playground:
+    - python: '!include ./src/python/mkdocs.yml'
+    # - bazel: './docs/BAZEL_README.md'
+    # - Github Actions: './docs/GITHUB_ACTIONS_README.md'
+    # - C++: '!include ./src/cpp/mkdocs.yml'
+    # - uv: './docs/UV_README.md'
+
+plugins:
+  - monorepo
