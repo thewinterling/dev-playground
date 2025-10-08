@@ -1,0 +1,19 @@
+site_name: dev-playground Documentation
+
+nav:
+  - Home: index.md
+  - Python:
+      - image_describer: python/image_describer/README.md
+      - packaging_example: python/packaging_example/README.md
+      - standalone_scripts: python/standalone_scripts/README.md
+  - C++: 
+    - leetcode: 
+      - cpp/leetcode/two_sum.md
+      - cpp/leetcode/add_two_numbers.md
+      - cpp/leetcode/remove_element.md
+      - cpp/leetcode/merge_arrays.md
+  - GitHub Actions: github_actions/README.md
+  - uv: uv/README.md
+  - Bazel: bazel/README.md
+theme:
+  name: material

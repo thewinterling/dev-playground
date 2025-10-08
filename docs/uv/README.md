@@ -19,4 +19,4 @@ or instead of sourcing the venv, `uv` can also be used like
 uv run <script_name>
 ```
 
-which then uses the environemnt for the script as well.
+which then uses the environment for the script as well.
